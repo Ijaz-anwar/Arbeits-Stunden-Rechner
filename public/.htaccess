@@ -9,10 +9,19 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# 2. Custom 404 Error Document
+# 2. Redirect sitemap variations to sitemap.xml
+RewriteRule ^sitemap/?$ /sitemap.xml [R=301,L]
+RewriteRule ^sitemap\.xml/+$ /sitemap.xml [R=301,L]
+
+# 3. Explicit MIME Types
+AddType application/xml .xml
+AddType text/xml .xml
+AddType text/plain .txt
+
+# 4. Custom 404 Error Document
 ErrorDocument 404 /404.html
 
-# 3. Security Headers
+# 5. Security Headers
 <IfModule mod_headers.c>
     Header set X-Content-Type-Options "nosniff"
     Header set X-Frame-Options "SAMEORIGIN"
@@ -21,13 +30,16 @@ ErrorDocument 404 /404.html
     Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 </IfModule>
 
-# 4. Long-Term Caching for Immutable Static Next.js Assets
+# 6. Long-Term Caching for Immutable Static Next.js Assets
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresDefault "access plus 1 month"
 
-    # HTML files: must revalidate to get latest version quickly
+    # HTML, XML and robots files: must revalidate to get latest version quickly
     ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType application/xml "access plus 0 seconds"
+    ExpiresByType text/xml "access plus 0 seconds"
+    ExpiresByType text/plain "access plus 0 seconds"
 
     # Static CSS and JavaScript chunks (have unique hashes)
     ExpiresByType text/css "access plus 1 year"
@@ -48,13 +60,13 @@ ErrorDocument 404 /404.html
     <FilesMatch "\.(js|css|woff2|woff|svg|png|jpg|webp)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
-    # HTML pages should revalidate
-    <FilesMatch "\.(html|htm)$">
+    # HTML pages, XML sitemaps, and robots.txt should revalidate immediately
+    <FilesMatch "\.(html|htm|xml|txt)$">
         Header set Cache-Control "public, max-age=0, must-revalidate"
     </FilesMatch>
 </IfModule>
 
-# 5. GZIP / Deflate Compression
+# 7. GZIP / Deflate Compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/plain
     AddOutputFilterByType DEFLATE text/html
