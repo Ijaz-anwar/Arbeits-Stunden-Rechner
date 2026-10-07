@@ -1,0 +1,61 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+# Minimum necessary GitHub Token permissions
+permissions:
+  contents: read
+
+# Avoid concurrent overlapping deployments
+concurrency:
+  group: deploy-cpanel
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy Static Site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js static export
+        run: npm run build
+
+      - name: Verify static export output directory
+        run: |
+          if [ ! -d "./out" ] || [ ! -f "./out/index.html" ]; then
+            echo "Error: Next.js static export directory './out' or './out/index.html' was not generated!"
+            exit 1
+          fi
+          echo "Static export verified successfully in ./out directory."
+
+      - name: Deploy static build to cPanel via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # The FTP account root is already restricted to the website's document root
+          server-dir: ./
+          # Deploy ONLY the contents of the generated static out directory
+          local-dir: ./out/
+          # Explicit FTPS over port 21
+          protocol: ftps
+          port: 21
+          # Safety: Do NOT delete all existing remote files blindly
+          dangerous-clean-slate: false
