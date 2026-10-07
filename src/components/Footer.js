@@ -90,7 +90,7 @@ export default function Footer() {
         {/* Bottom Disclaimer and Copyright */}
         <div className="mt-12 pt-8 border-t border-slate-800 text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p>
-            &copy; {currentYear} Arbeitsstundenrechner.de. Alle Rechte vorbehalten.
+            &copy; {currentYear} Arbeitsstundenrechner.de. Alle Rechte vorbehalten. | Auto Deployment Active
           </p>
           <p className="text-slate-400 text-center sm:text-right">
             Hinweis: Alle Berechnungen erfolgen ohne Gewähr und ersetzen keine Rechts- oder Lohnberatung.
