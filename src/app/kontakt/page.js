@@ -33,7 +33,7 @@ export default function KontaktPage() {
     // Ehrlicher Hinweis: Reines Frontend-Projekt ohne Mailserver-Backend
     setStatusMessage({
       type: "notice",
-      text: "Vielen Dank für Ihre Nachricht! Hinweis: Da diese Website als statische/clientseitige Webanwendung ohne zwischengeschalteten Mailserver läuft, senden Sie Ihre Anfrage bitte direkt per E-Mail an info@arbeitsstundenrechner.de.",
+      text: "Vielen Dank für Ihre Nachricht! Hinweis: Da diese Website als statische/clientseitige Webanwendung ohne zwischengeschalteten Mailserver läuft, senden Sie Ihre Anfrage bitte direkt per E-Mail an contact@arbeitsstundenrechner.de.",
     });
   };
 
@@ -68,10 +68,10 @@ export default function KontaktPage() {
                   <div>
                     <span className="font-semibold block text-slate-900">E-Mail-Adresse</span>
                     <a
-                      href="mailto:info@arbeitsstundenrechner.de"
+                      href="mailto:contact@arbeitsstundenrechner.de"
                       className="font-mono text-xs text-blue-600 hover:text-blue-800 hover:underline bg-blue-50 px-2 py-0.5 rounded break-all font-semibold"
                     >
-                      info@arbeitsstundenrechner.de
+                      contact@arbeitsstundenrechner.de
                     </a>
                   </div>
                 </div>

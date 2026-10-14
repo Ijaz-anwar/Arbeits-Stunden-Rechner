@@ -149,12 +149,12 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@arbeitsstundenrechner.de"
+                  href="mailto:contact@arbeitsstundenrechner.de"
                   className="text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 text-xs sm:text-sm"
                   title="E-Mail senden"
                 >
                   <Mail className="w-3.5 h-3.5 text-blue-400 shrink-0" />
-                  <span className="break-all">info@arbeitsstundenrechner.de</span>
+                  <span className="break-all">contact@arbeitsstundenrechner.de</span>
                 </a>
               </li>
             </ul>

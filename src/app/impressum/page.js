@@ -61,10 +61,10 @@ export default function ImpressumPage() {
               <p>
                 E-Mail:{" "}
                 <a
-                  href="mailto:info@arbeitsstundenrechner.de"
+                  href="mailto:contact@arbeitsstundenrechner.de"
                   className="text-blue-600 hover:underline"
                 >
-                  info@arbeitsstundenrechner.de
+                  contact@arbeitsstundenrechner.de
                 </a>
               </p>
               <p>Telefon: [Ihre Telefonnummer, z. B. +49 (0) 123 456789]</p>
