@@ -39,6 +39,13 @@ export const metadata = {
       "de-DE": "https://arbeitsstundenrechner.de",
     },
   },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: {
     title: "Stunden Rechner Online – Arbeitszeit, Stunden und Minuten einfach berechnen",
     description:

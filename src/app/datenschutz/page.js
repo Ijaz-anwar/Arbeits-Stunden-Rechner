@@ -67,7 +67,15 @@ export default function DatenschutzPage() {
               <p>[Vertretungsberechtigte Person / Geschäftsführer: Vor- und Nachname]</p>
               <p>[Straße und Hausnummer]</p>
               <p>[Postleitzahl, Ort, Land]</p>
-              <p>E-Mail: [Ihre Kontakt-E-Mail-Adresse]</p>
+              <p>
+                E-Mail:{" "}
+                <a
+                  href="mailto:info@arbeitsstundenrechner.de"
+                  className="text-blue-600 hover:underline"
+                >
+                  info@arbeitsstundenrechner.de
+                </a>
+              </p>
             </div>
           </section>
 

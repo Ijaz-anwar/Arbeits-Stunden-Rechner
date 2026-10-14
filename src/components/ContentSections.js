@@ -133,6 +133,17 @@ export default function ContentSections() {
           Mitternachtsüberschreitungen vollautomatisch und liefert ohne negative Vorzeichen die exakte
           Brutto- und Nettoarbeitszeit.
         </p>
+
+        <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <span className="text-xs text-slate-500">Möchten Sie diese Berechnung direkt interaktiv durchführen?</span>
+          <Link
+            href="/stunden-minuten-rechner"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-xs transition-colors self-start sm:self-auto"
+          >
+            <span>Zum Stunden Minuten Rechner</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </section>
 
       {/* 3. Zeit Rechner Stunden */}
@@ -207,6 +218,17 @@ export default function ContentSections() {
           Ein Online-Zeitrechner ist besonders praktisch, wenn Sie im Beruf regelmäßig mit
           unterschiedlichen Zeitformaten wie Industrieminuten und Stempeluhr-Zeiten arbeiten.
         </p>
+
+        <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <span className="text-xs text-slate-500">Minuten und Stunden umrechnen oder Zeitdifferenz ermitteln?</span>
+          <Link
+            href="/zeit-rechner-stunden"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-xs transition-colors self-start sm:self-auto"
+          >
+            <span>Zum Zeit Rechner Stunden</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </section>
 
       {/* 4. Stunden Dezimal Rechner */}
@@ -298,6 +320,17 @@ export default function ContentSections() {
           digitale Zeiterfassung benötigt werden, da Stundensätze nur mit Dezimalwerten multipliziert
           werden können.
         </p>
+
+        <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <span className="text-xs text-slate-500">Stunden und Minuten in Dezimalstunden für Stundenzettel umwandeln?</span>
+          <Link
+            href="/stunden-dezimal-rechner"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-xs transition-colors self-start sm:self-auto"
+          >
+            <span>Zum Stunden Dezimal Rechner</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </section>
 
       {/* 5. Industrie Stunden Rechner */}
@@ -356,6 +389,17 @@ export default function ContentSections() {
           sollten jedoch die im jeweiligen Unternehmen geltenden Arbeitszeitregeln und das
           verwendete Zeiterfassungssystem berücksichtigt werden.
         </p>
+
+        <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <span className="text-xs text-slate-500">Industrieminuten (100er-Teilung) oder Schichten direkt erfassen?</span>
+          <Link
+            href="/industrie-stunden-rechner"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-xs transition-colors self-start sm:self-auto"
+          >
+            <span>Zum Industrie Stunden Rechner</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </section>
 
       {/* 6. Stunden Zusammenrechnen Rechner */}
@@ -407,6 +451,17 @@ export default function ContentSections() {
             Der Vorteil unseres Online-Rechners besteht darin, dass Sie nicht jedes Zeitintervall manuell
             umrechnen müssen, sondern Vorlagen und Wochensummen direkt digital erfassen können.
           </p>
+        </div>
+
+        <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <span className="text-xs text-slate-500">Möchten Sie mehrere Arbeitstage und Stunden zusammenrechnen?</span>
+          <Link
+            href="/stunden-zusammenrechnen-rechner"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-xs transition-colors self-start sm:self-auto"
+          >
+            <span>Zum Stunden Zusammenrechnen Rechner</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 
@@ -463,6 +518,17 @@ export default function ContentSections() {
           Bei mehreren Abzügen sollten die einzelnen Zeitwerte möglichst genau eingegeben werden, damit
           das Ergebnis frei von Rundungsfehlern bleibt.
         </p>
+
+        <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <span className="text-xs text-slate-500">Pausen, Minusstunden oder Gleitzeitabzüge direkt abziehen?</span>
+          <Link
+            href="/stunden-reduzieren-rechner"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-xs transition-colors self-start sm:self-auto"
+          >
+            <span>Zum Stunden Reduzieren Rechner</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </section>
 
       {/* 8. Minuten Stunden Rechner */}
@@ -537,6 +603,17 @@ export default function ContentSections() {
           Für die Rückrechnung von Stunden in Minuten wird die Zahl einfach mit 60 multipliziert:
           Beispielsweise ergeben <strong>6 Stunden × 60 = 360 Minuten</strong>.
         </p>
+
+        <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <span className="text-xs text-slate-500">Minuten direkt in Stunden oder Dezimalstunden umwandeln?</span>
+          <Link
+            href="/minuten-stunden-rechner"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-xs transition-colors self-start sm:self-auto"
+          >
+            <span>Zum Minuten Stunden Rechner</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </section>
 
       {/* 9. Minijob Rechner Stunden */}
@@ -591,6 +668,17 @@ export default function ContentSections() {
           berücksichtigt werden. Ein Stundenrechner unterstützt die mathematische Berechnung, ersetzt aber
           keine rechtliche oder steuerliche Fachberatung.
         </div>
+
+        <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <span className="text-xs text-slate-500">Maximale Minijob-Stunden bei 538 € Verdienstgrenze berechnen?</span>
+          <Link
+            href="/minijob-rechner-stunden"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-xs transition-colors self-start sm:self-auto"
+          >
+            <span>Zum Minijob Rechner Stunden</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </section>
 
       {/* 10. Stunden Brutto Rechner */}
@@ -642,6 +730,17 @@ export default function ContentSections() {
           Zuschläge, Prämien, Nachtarbeit, Feiertagsarbeit oder tarifliche Überstundenzuschläge können die
           tatsächliche Vergütung zusätzlich erhöhen und müssen bei der Abrechnung gesondert ausgewiesen werden.
         </p>
+
+        <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <span className="text-xs text-slate-500">Bruttolohn aus Stunden &amp; Zuschlägen berechnen?</span>
+          <Link
+            href="/stunden-brutto-rechner"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-xs transition-colors self-start sm:self-auto"
+          >
+            <span>Zum Stunden Brutto Rechner</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </section>
 
       {/* 11. Brutto Netto Rechner Stunden */}
@@ -690,6 +789,17 @@ export default function ContentSections() {
           Unser Stundenrechner liefert hierfür die verlässliche mathematische Grundlage für die exakten
           Brutto-Arbeitsstunden.
         </p>
+
+        <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <span className="text-xs text-slate-500">Effektiven Netto-Stundenlohn &amp; Nettogehalt ermitteln?</span>
+          <Link
+            href="/brutto-netto-rechner-stunden"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-xs transition-colors self-start sm:self-auto"
+          >
+            <span>Zum Brutto Netto Rechner Stunden</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </section>
 
       {/* 12. Gesetzliche Pausenzeiten (§ 4 ArbZG) */}

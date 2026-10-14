@@ -58,7 +58,15 @@ export default function ImpressumPage() {
               2. Kontaktmöglichkeiten
             </h2>
             <div className="space-y-1 bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-xs sm:text-sm text-slate-800">
-              <p>E-Mail: [Ihre Kontakt-E-Mail-Adresse, z. B. kontakt@ihre-domain.de]</p>
+              <p>
+                E-Mail:{" "}
+                <a
+                  href="mailto:info@arbeitsstundenrechner.de"
+                  className="text-blue-600 hover:underline"
+                >
+                  info@arbeitsstundenrechner.de
+                </a>
+              </p>
               <p>Telefon: [Ihre Telefonnummer, z. B. +49 (0) 123 456789]</p>
               <p>Webseite: https://arbeitsstundenrechner.de</p>
             </div>

@@ -101,6 +101,137 @@ export default function HomePage() {
           <Calculator />
         </section>
 
+        {/* Specialized Calculator Cards */}
+        <section className="mt-12 max-w-4xl mx-auto" aria-label="Spezialisierte Rechner">
+          <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-slate-500">
+              Spezialisierte Online-Rechner:
+            </h2>
+            <span className="text-xs text-slate-400">Kostenlos &amp; direkt im Browser</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <Link
+              href="/stunden-minuten-rechner"
+              className="p-4 rounded-xl border border-slate-200 bg-white hover:border-blue-400 hover:shadow-xs transition-all group"
+            >
+              <span className="text-sm font-bold text-slate-900 group-hover:text-blue-600 block">
+                Stunden Minuten Rechner
+              </span>
+              <span className="text-xs text-slate-500 mt-1 block">
+                Arbeitszeiten, Schichten &amp; Pausen erfassen →
+              </span>
+            </Link>
+
+            <Link
+              href="/zeit-rechner-stunden"
+              className="p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-400 hover:shadow-xs transition-all group"
+            >
+              <span className="text-sm font-bold text-slate-900 group-hover:text-emerald-600 block">
+                Zeit Rechner Stunden
+              </span>
+              <span className="text-xs text-slate-500 mt-1 block">
+                Minuten umrechnen &amp; Zeitdifferenzen berechnen →
+              </span>
+            </Link>
+
+            <Link
+              href="/stunden-dezimal-rechner"
+              className="p-4 rounded-xl border border-slate-200 bg-white hover:border-blue-400 hover:shadow-xs transition-all group"
+            >
+              <span className="text-sm font-bold text-slate-900 group-hover:text-blue-600 block">
+                Stunden Dezimal Rechner
+              </span>
+              <span className="text-xs text-slate-500 mt-1 block">
+                Stunden &amp; Minuten in Dezimalstunden (7:30 = 7,50) →
+              </span>
+            </Link>
+
+            <Link
+              href="/industrie-stunden-rechner"
+              className="p-4 rounded-xl border border-slate-200 bg-white hover:border-indigo-400 hover:shadow-xs transition-all group"
+            >
+              <span className="text-sm font-bold text-slate-900 group-hover:text-indigo-600 block">
+                Industrie Stunden Rechner
+              </span>
+              <span className="text-xs text-slate-500 mt-1 block">
+                Industrieminuten (100er-Teilung) &amp; DATEV/SAP →
+              </span>
+            </Link>
+
+            <Link
+              href="/stunden-zusammenrechnen-rechner"
+              className="p-4 rounded-xl border border-slate-200 bg-white hover:border-blue-400 hover:shadow-xs transition-all group"
+            >
+              <span className="text-sm font-bold text-slate-900 group-hover:text-blue-600 block">
+                Stunden Zusammenrechnen
+              </span>
+              <span className="text-xs text-slate-500 mt-1 block">
+                Mehrere Schichten, Tage &amp; Arbeitsstunden addieren →
+              </span>
+            </Link>
+
+            <Link
+              href="/stunden-reduzieren-rechner"
+              className="p-4 rounded-xl border border-slate-200 bg-white hover:border-rose-400 hover:shadow-xs transition-all group"
+            >
+              <span className="text-sm font-bold text-slate-900 group-hover:text-rose-600 block">
+                Stunden Reduzieren Rechner
+              </span>
+              <span className="text-xs text-slate-500 mt-1 block">
+                Pausen, Fehlzeiten &amp; Gleitzeitstunden abziehen →
+              </span>
+            </Link>
+
+            <Link
+              href="/minuten-stunden-rechner"
+              className="p-4 rounded-xl border border-slate-200 bg-white hover:border-amber-400 hover:shadow-xs transition-all group"
+            >
+              <span className="text-sm font-bold text-slate-900 group-hover:text-amber-600 block">
+                Minuten Stunden Rechner
+              </span>
+              <span className="text-xs text-slate-500 mt-1 block">
+                Minuten in Stunden &amp; Dezimalwerte umrechnen →
+              </span>
+            </Link>
+
+            <Link
+              href="/minijob-rechner-stunden"
+              className="p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-400 hover:shadow-xs transition-all group"
+            >
+              <span className="text-sm font-bold text-slate-900 group-hover:text-emerald-600 block">
+                Minijob Rechner Stunden
+              </span>
+              <span className="text-xs text-slate-500 mt-1 block">
+                538 € Verdienstgrenze &amp; Höchstarbeitszeit →
+              </span>
+            </Link>
+
+            <Link
+              href="/stunden-brutto-rechner"
+              className="p-4 rounded-xl border border-slate-200 bg-white hover:border-blue-400 hover:shadow-xs transition-all group"
+            >
+              <span className="text-sm font-bold text-slate-900 group-hover:text-blue-600 block">
+                Stunden Brutto Rechner
+              </span>
+              <span className="text-xs text-slate-500 mt-1 block">
+                Bruttolohn, Überstunden- &amp; Nachtzuschläge kalkulieren →
+              </span>
+            </Link>
+
+            <Link
+              href="/brutto-netto-rechner-stunden"
+              className="p-4 rounded-xl border border-slate-200 bg-white hover:border-indigo-400 hover:shadow-xs transition-all group"
+            >
+              <span className="text-sm font-bold text-slate-900 group-hover:text-indigo-600 block">
+                Brutto Netto Rechner Stunden
+              </span>
+              <span className="text-xs text-slate-500 mt-1 block">
+                Effektiven Netto-Stundenlohn nach Steuerklasse berechnen →
+              </span>
+            </Link>
+          </div>
+        </section>
+
         {/* Quick Topic Navigation Cards */}
         <section className="mt-12 max-w-4xl mx-auto" aria-label="Arbeitszeit Ratgeber">
           <h2 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-3 text-center sm:text-left">

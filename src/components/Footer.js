@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Clock, ShieldCheck } from "lucide-react";
+import { Clock, ShieldCheck, Mail } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -7,9 +7,9 @@ export default function Footer() {
   return (
     <footer className="mt-auto bg-slate-900 text-slate-300 border-t border-slate-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
           {/* Brand Column */}
-          <div className="md:col-span-2 space-y-4">
+          <div className="sm:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2.5 group inline-flex">
               <div className="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center text-white">
                 <Clock className="w-5 h-5" />
@@ -18,7 +18,7 @@ export default function Footer() {
                 Stundenrechner
               </span>
             </Link>
-            <p className="text-slate-400 text-sm leading-relaxed max-w-md">
+            <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
               Ihr zuverlässiger, kostenloser Online-Stundenrechner für die präzise Berechnung von Arbeitszeiten,
               gesetzlichen Pausen nach § 4 ArbZG, Dezimalstunden für Stundenzettel und Bruttolohn.
             </p>
@@ -26,6 +26,95 @@ export default function Footer() {
               <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
               <span>100 % lokaler Datenschutz – Berechnungen erfolgen direkt im Browser ohne Server-Speicherung.</span>
             </div>
+          </div>
+
+          {/* Online-Rechner Column */}
+          <div className="space-y-3">
+            <h3 className="text-xs font-bold text-slate-200 uppercase tracking-wider">
+              Online-Rechner
+            </h3>
+            <ul className="space-y-2 text-xs sm:text-sm">
+              <li>
+                <Link
+                  href="/stunden-minuten-rechner"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Stunden Minuten Rechner
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/zeit-rechner-stunden"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Zeit Rechner Stunden
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/stunden-dezimal-rechner"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Stunden Dezimal Rechner
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industrie-stunden-rechner"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Industrie Stunden Rechner
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/stunden-zusammenrechnen-rechner"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Stunden Zusammenrechnen
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/stunden-reduzieren-rechner"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Stunden Reduzieren Rechner
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/minuten-stunden-rechner"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Minuten Stunden Rechner
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/minijob-rechner-stunden"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Minijob Rechner Stunden
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/stunden-brutto-rechner"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Stunden Brutto Rechner
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/brutto-netto-rechner-stunden"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Brutto Netto Rechner Stunden
+                </Link>
+              </li>
+            </ul>
           </div>
 
           {/* Quick Links */}
@@ -39,7 +128,7 @@ export default function Footer() {
                   href="/"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
-                  Stundenrechner
+                  Hauptrechner
                 </Link>
               </li>
               <li>
@@ -57,6 +146,16 @@ export default function Footer() {
                 >
                   Kontakt &amp; Feedback
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="mailto:info@arbeitsstundenrechner.de"
+                  className="text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 text-xs sm:text-sm"
+                  title="E-Mail senden"
+                >
+                  <Mail className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                  <span className="break-all">info@arbeitsstundenrechner.de</span>
+                </a>
               </li>
             </ul>
           </div>
