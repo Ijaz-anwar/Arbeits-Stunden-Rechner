@@ -141,6 +141,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/ueber-uns"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Über uns
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/kontakt"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
@@ -180,6 +188,22 @@ export default function Footer() {
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   Datenschutzerklärung
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/disclaimer"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Disclaimer
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/nutzungsbedingungen"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Nutzungsbedingungen
                 </Link>
               </li>
             </ul>
